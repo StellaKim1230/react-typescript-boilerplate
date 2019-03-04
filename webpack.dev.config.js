@@ -16,7 +16,7 @@ module.exports = merge(baseConfig, {
   module: {
     rules: [
       {
-        test: /\.ts$/,
+        test: /\.tsx$/,
         exclude: /node_modules/,
         use: [
           {

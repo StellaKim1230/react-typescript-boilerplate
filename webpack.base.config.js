@@ -5,14 +5,14 @@ const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin')
 module.exports = {
   entry: [
     '@babel/polyfill',
-    path.resolve(__dirname, 'src/index.js'),
+    path.resolve(__dirname, 'src/index.tsx'),
   ],
   resolve: {
     modules: [
       'node_modules',
       path.resolve(__dirname, 'src'),
     ],
-    extensions: ['.js', '.ts'],
+    extensions: ['.js', '.ts', '.tsx'],
     alias: {
       components: path.resolve(__dirname, 'src/components'),
     },
