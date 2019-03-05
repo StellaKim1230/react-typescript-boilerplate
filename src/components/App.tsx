@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
-export interface HelloProps { compiler: string, framework: string}
+import { Hello } from './Hello'
 
-export const Hello = (props: HelloProps) =>
- <h1>Hello from {props.compiler} and {props.framework}!</h1>
- 
+export interface AppProps { compiler: string, framework: string }
+
+export const App = (props: AppProps) =>
+<Fragment>
+  <h1>HI from {props.compiler} and {props.framework}!</h1>
+  <Hello title='account-book'/>
+</Fragment>
