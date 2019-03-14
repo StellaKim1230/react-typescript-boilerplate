@@ -1,11 +1,22 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, Component } from 'react'
 
-import { Hello } from './Hello'
+import Hello from './Hello'
 
-export interface AppProps { compiler: string, framework: string }
+interface Props {
+  compiler: string
+  framework: string
+}
 
-export const App = (props: AppProps) =>
-<Fragment>
-  <h1>HI from {props.compiler} and {props.framework}!</h1>
-  <Hello title='account-book'/>
-</Fragment>
+class App extends Component<Props> {
+  render () {
+    const { compiler, framework } = this.props
+    return (
+      <Fragment>
+        <h1>HI from {compiler} and {framework}!</h1>
+        <Hello title='account-book'/>
+      </Fragment>
+    )
+  }
+}
+
+export default App

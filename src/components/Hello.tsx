@@ -1,6 +1,16 @@
-import React from 'react'
+import React, { Component, Fragment } from 'react'
 
-export interface HelloProps { title: string }
+interface Props { title: string }
 
-export const Hello = (props: HelloProps) =>
- <h1> {props.title} </h1>
+class Hello extends Component<Props> {
+  render () {
+    const { title } = this.props
+    return (
+      <Fragment>
+        <h1> {title} </h1>
+      </Fragment>
+    )
+  }
+}
+
+export default Hello

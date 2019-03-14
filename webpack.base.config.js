@@ -13,9 +13,6 @@ module.exports = {
       path.resolve(__dirname, 'src'),
     ],
     extensions: ['.js', '.ts', '.tsx'],
-    alias: {
-      components: path.resolve(__dirname, 'src/components'),
-    },
   },
   plugins: [
     new LodashModuleReplacementPlugin(),
