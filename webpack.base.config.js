@@ -12,7 +12,7 @@ module.exports = {
       'node_modules',
       path.resolve(__dirname, 'src'),
     ],
-    extensions: ['.js', '.ts', '.tsx', '.jsx'],
+    extensions: ['.js', '.ts', '.tsx', '.jsx', '.css', '.scss'],
   },
   plugins: [
     new LodashModuleReplacementPlugin(),
