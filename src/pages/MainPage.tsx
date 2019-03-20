@@ -1,9 +1,13 @@
 import React, { Component, Fragment } from 'react';
 
-class MainPage extends Component {
+interface Props {
+  title : string,
+}
+class MainPage extends Component<Props> {
   render () {
+    const { title } = this.props
     return (
-      <Fragment>Main Page</Fragment>
+      <Fragment>{title}</Fragment>
     )
   }
 }

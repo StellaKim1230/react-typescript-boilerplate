@@ -1,9 +1,9 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import * as React from 'react'
+import * as ReactDOM from 'react-dom'
 
-import App from './components/App'
+import MainPage from './pages/MainPage'
 
 ReactDOM.render(
-  <App compiler='Typescript' framework='React'/>,
+  <MainPage title='가계부'/>,
   document.getElementById('root')
 )
