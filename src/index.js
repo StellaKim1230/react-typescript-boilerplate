@@ -3,4 +3,4 @@ exports.__esModule = true;
 var React = require("react");
 var ReactDOM = require("react-dom");
 var MainPage_1 = require("./pages/MainPage");
-ReactDOM.render(<MainPage_1["default"] title='가계부'/>, document.getElementById('root'));
+ReactDOM.render(React.createElement(MainPage_1["default"], { title: '\uAC00\uACC4\uBD80' }), document.getElementById('root'));
