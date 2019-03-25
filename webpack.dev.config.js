@@ -27,11 +27,36 @@ module.exports = merge(baseConfig, {
         ],
       },
       {
-        test: /\.js$/,
+        test: /\.jsx$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
         },
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: { importLoaders: 1 },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              config: {
+                path: path.resolve(__dirname, 'configs/'),
+              },
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              includePaths: [path.resolve(__dirname, 'src/styles')],
+              data: '@import "./src/styles/_variables.scss";',
+            },
+          },
+        ],
       },
     ],
   },
