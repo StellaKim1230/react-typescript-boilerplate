@@ -4,6 +4,7 @@ import { Component, Fragment } from 'react';
 interface Props {
   title : string,
 }
+
 class MainPage extends Component<Props> {
   render () {
     const { title } = this.props
