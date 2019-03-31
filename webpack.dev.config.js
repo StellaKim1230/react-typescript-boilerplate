@@ -4,6 +4,7 @@ const { HotModuleReplacementPlugin, DefinePlugin } = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const baseConfig = require('./webpack.base.config')
 const devServerConfig = require('./configs/devServer.config')
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
 module.exports = merge(baseConfig, {
   mode: 'development',
@@ -16,7 +17,7 @@ module.exports = merge(baseConfig, {
   module: {
     rules: [
       {
-        test: /\.ts$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
         use: [
           {
@@ -25,13 +26,6 @@ module.exports = merge(baseConfig, {
           },
           'awesome-typescript-loader'
         ],
-      },
-      {
-        test: /\.jsx$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
       },
       {
         test: /\.scss$/,

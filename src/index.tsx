@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 
 import { configureStore } from './redux/store'
 
-import MainPage from './pages/MainPage'
+import App from './containers/App'
 
 import './index.scss'
 
@@ -13,11 +13,11 @@ const store = configureStore({
   // ...initialize any prepared state
 })
 
-if (!rootElement) throw Error('Dom element div#root not found')
+if (!rootElement) throw Error ('Dom element div#root not found')
 
 render(
   <Provider store={store}>
-    <MainPage title='가계부'/>
+    <App />
   </Provider>,
   rootElement,
 )

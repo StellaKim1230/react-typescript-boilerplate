@@ -1,0 +1,24 @@
+{
+  "extends": [
+    "tslint:recommended"
+  ],
+  "rules": {
+    "no-console": false,
+    "semicolon": [true, "never"],
+    "whitespace": [
+        true,
+        "check-branch",
+        "check-decl",
+        "check-operator",
+        "check-module",
+        "check-separator",
+        "check-type"
+    ],
+    "trailing-comma": [true, {"multiline": "always", "singleline": "never"}],
+    "quotemark": [true, "single"],
+    "interface-name": [true, "never-prefix"],
+    "member-access": [true, "no-public"],
+    "space-before-function-paren": [true, "always"],
+    "curly": [true, "ignore-same-line"]
+  },
+}
