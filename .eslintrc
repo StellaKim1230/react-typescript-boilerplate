@@ -1,4 +1,11 @@
-{
+{  
+  "globals": {
+    "window": true,
+    "document": true,
+    "DEV": true,
+    "DEPLOYED_ADDRESS": true,
+    "artifacts": true
+  },
   "parser": "babel-eslint",
   "extends": [
     "eslint:recommended",

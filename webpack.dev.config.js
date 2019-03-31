@@ -1,6 +1,6 @@
 const path = require('path')
 const merge = require('webpack-merge')
-const { HotModuleReplacementPlugin } = require('webpack')
+const { HotModuleReplacementPlugin, DefinePlugin } = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const baseConfig = require('./webpack.base.config')
 const devServerConfig = require('./configs/devServer.config')
@@ -66,6 +66,13 @@ module.exports = merge(baseConfig, {
       title: 'dev',
       template: path.resolve(__dirname, 'static/index.ejs'),
       inject: true,
-    })
+    }),
+    new BundleAnalyzerPlugin({
+      analyzerPort: 7000,
+      openAnalyzer: false,
+    }),
+    new DefinePlugin({
+      DEV: true,
+    }),
   ]
 })
