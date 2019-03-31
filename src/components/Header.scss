@@ -1,0 +1,8 @@
+@import "../styles/_variables.scss";
+
+.Header {
+  border-bottom: 1px solid $box-line-color;
+  padding: 1.2rem;
+  font-size: 2rem;
+  font-weight: bold;
+}

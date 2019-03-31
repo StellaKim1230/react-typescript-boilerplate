@@ -1,0 +1,8 @@
+@import "../styles/_variables.scss";
+
+.Sidebar {
+  display: inline-block;
+  width: 15%;
+  border-right: 1px solid $box-line-color;
+  height: calc(100% - 4.9rem);
+}

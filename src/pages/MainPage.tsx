@@ -1,14 +1,17 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 
-interface Props {
-  title: string,
-}
+import Header from '../components/Header'
+import AccountContent from '../components/AccountContent'
+import Sidebar from '../components/Sidebar'
 
-class MainPage extends Component<Props> {
+class MainPage extends Component {
   render () {
-    const { title } = this.props
     return (
-      <div>Main Page</div>
+      <Fragment>
+        <Header />
+        <Sidebar />
+        <AccountContent />
+      </Fragment>
     )
   }
 }
