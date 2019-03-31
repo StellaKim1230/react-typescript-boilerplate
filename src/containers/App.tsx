@@ -1,11 +1,21 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 
+import { BrowserRouter, Route } from 'react-router-dom'
+// import { Router, Route } from 'react-router'
+
+import SiderbarTemplate from '../templates/SiderbarTemplate'
 import MainPage from '../pages/MainPage'
 
 class App extends Component {
-  render () {
+  render() {
     return (
-      <MainPage/>
+      <Fragment>
+        <SiderbarTemplate>
+          <BrowserRouter>
+            <Route exact path='/' component={MainPage} />
+          </BrowserRouter>
+        </SiderbarTemplate>
+      </Fragment>
     )
   }
 }

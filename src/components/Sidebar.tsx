@@ -6,7 +6,7 @@ class Sidebar extends Component {
   render() {
     return (
       <div className='Sidebar'>
-        가계부 Sidebar
+        사이드바
       </div>
     )
   }

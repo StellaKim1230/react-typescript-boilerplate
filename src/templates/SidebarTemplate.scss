@@ -1,0 +1,19 @@
+@import "../styles/_variables.scss";
+
+.SiderbarTemplate {
+  height: 100%;
+
+  &__sidebar {
+    position: fixed;
+    width: 20rem;
+    height: 100vh;
+    border-right: 1px solid $box-line-color;
+  }
+
+  &__main {
+    position: relative;
+    height: 100vh;
+    left: 20rem;
+    width: calc(100% - 20rem);
+  }
+}

@@ -1,17 +1,13 @@
 import React, { Component, Fragment } from 'react'
 
-import Header from '../components/Header'
-import AccountContent from '../components/AccountContent'
-import Sidebar from '../components/Sidebar'
+import AccountHome from '../components/AccountHome'
 
 class MainPage extends Component {
-  render () {
+  render() {
     return (
-      <Fragment>
-        <Header />
-        <Sidebar />
-        <AccountContent />
-      </Fragment>
+      <div className='MainPage'>
+        <AccountHome />
+      </div>
     )
   }
 }
