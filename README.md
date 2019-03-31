@@ -1,1 +1,1 @@
-## HOME ACCOUNT BOOK <FRONTEND>
+## React Typescript Boilerplate
